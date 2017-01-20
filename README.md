@@ -2,9 +2,7 @@
 
 ## Build it
 
-git clone https://github.com/petercreyghton/metar \n
-cd metar\n
-docker build -t metar . \n
+git clone https://github.com/petercreyghton/metar; cd metar; docker build -t metar .
 
 # Run it
 
