@@ -13,8 +13,9 @@ curl -Ls http://knmi.nl/nederland-nu/luchtvaart/vliegveldwaarnemingen \
         fi ; \
     done \
     | tr -s " " \
-    | sort -k3 > data.txt
-
-cat data.txt |grep -i -e eham -e ehdl -e ehlw -e ehbk -e eheh -e ehgg -e ehwo -e ehrd -e ehgr| while read line; do echo $(date +"%F %H:%M:%S") $line; done
+    | sort -k3 \
+\
+    | grep -i -e eham -e ehdl -e ehlw -e ehbk -e eheh -e ehgg -e ehwo -e ehrd -e ehgr \
+    | while read line; do echo $(date +"%F %H:%M:%S") $line; done
 
 
