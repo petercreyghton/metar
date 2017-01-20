@@ -5,7 +5,7 @@ curl -Ls http://knmi.nl/nederland-nu/luchtvaart/vliegveldwaarnemingen \
     | grep -o '<pre.*</pre>' \
     | tr "|" "\n" \
     | grep -v "<pre" |grep -v "pre>" \
-    |grep -v "ZCZC" \
+    | grep -v "ZCZC" \
     | while read line; do \
         echo -n "$line"; \
         if [ "$line" == "" ]; \
