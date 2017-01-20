@@ -13,9 +13,10 @@ curl -Ls http://knmi.nl/nederland-nu/luchtvaart/vliegveldwaarnemingen \
         fi ; \
     done \
     | tr -s " " \
+    | sed 's/\./\. /g' \
     | sort -k3 \
 \
-    | grep -i -e eham -e ehdl -e ehlw -e ehbk -e eheh -e ehgg -e ehwo -e ehrd -e ehgr \
+    | grep -i -e ehkd -e ehvk -e eham -e ehdl -e ehlw -e ehbk -e eheh -e ehgg -e ehwo -e ehrd -e ehgr \
     | while read line; do echo $(date +"%F %H:%M:%S") $line; done
 
 
