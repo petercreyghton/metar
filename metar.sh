@@ -7,7 +7,7 @@ curl -Ls http://knmi.nl/nederland-nu/luchtvaart/vliegveldwaarnemingen \
     | grep -v "<pre" |grep -v "pre>" \
     | grep -v "ZCZC" \
     | while read line; do \
-        echo -n "$line"; \
+        echo -n "$line "; \
         if [ "$line" == "" ]; \
         then echo ""; \
         fi ; \
